@@ -1,3 +1,7 @@
+## 2.0.0-beta.16 - February 18, 2025
+
+- Moved repo, and made minor fixes
+
 ## 2.0.0-beta.15 - January 27, 2025
 
 - Breaking change: Removed the hashers and equality checkers from Misc Tools
