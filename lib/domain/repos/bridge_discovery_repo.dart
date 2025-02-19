@@ -15,7 +15,6 @@ import 'package:flutter_hue/domain/services/hue_http_client.dart';
 import 'package:flutter_hue/utils/json_tool.dart';
 import 'package:flutter_hue/utils/misc_tools.dart';
 import 'package:flutter_hue/utils/my_file_explorer_sdk/my_file_explorer_sdk.dart';
-// import 'package:universal_html/html.dart' as html;
 
 /// This is the way to communicate with Flutter Hue Bridge services.
 class BridgeDiscoveryRepo {
@@ -30,6 +29,13 @@ class BridgeDiscoveryRepo {
   /// Returns a list of [DiscoveredBridge] objects. These contain the IP address
   /// of the bridge and a partial ID of the bridge.
   ///
+  /// `method` The method used to discover bridges. The default is `endpoint`.
+  /// The mDNS method has some bugs on iOS. The endpoint method might not work
+  /// immediately after starting a new bridge, or plugging in an old one. The
+  /// bridge needs to be connected to the network for a few minutes before it
+  /// can be discovered using the endpoint method. This is an edge case, and
+  /// endpoint is still the recommended method.
+  ///
   /// If saved bridges are not saved to the default folder, provide their
   /// location with `savedBridgesDir`.
   ///
@@ -38,6 +44,7 @@ class BridgeDiscoveryRepo {
   /// method. This will be used in addition to the default decryption method.
   /// This will be performed after the default decryption method.
   static Future<List<DiscoveredBridge>> discoverBridges({
+    BridgeDiscoveryMethod method = BridgeDiscoveryMethod.endpoint,
     Directory? savedBridgesDir,
     bool writeToLocal = true,
     String Function(String ciphertext)? decrypter,
@@ -61,12 +68,23 @@ class BridgeDiscoveryRepo {
       // mDNS does not work on web.
       bridgesFromMdns = [];
     } else {
-      bridgesFromMdns = await BridgeDiscoveryService.discoverBridgesMdns();
+      if (identical(method, BridgeDiscoveryMethod.mdns) ||
+          identical(method, BridgeDiscoveryMethod.both)) {
+        bridgesFromMdns = await BridgeDiscoveryService.discoverBridgesMdns();
+      } else {
+        bridgesFromMdns = [];
+      }
     }
 
     /// Bridges found using the endpoint method.
-    List<DiscoveredBridge> bridgesFromEndpoint =
-        await BridgeDiscoveryService.discoverBridgesEndpoint();
+    List<DiscoveredBridge> bridgesFromEndpoint;
+    if (identical(method, BridgeDiscoveryMethod.endpoint) ||
+        identical(method, BridgeDiscoveryMethod.both)) {
+      bridgesFromEndpoint =
+          await BridgeDiscoveryService.discoverBridgesEndpoint();
+    } else {
+      bridgesFromEndpoint = [];
+    }
 
     // Remove duplicates from the two search methods.
     Set<DiscoveredBridge> uniqueValues = {};
@@ -443,4 +461,16 @@ class DiscoveryTimeoutController {
 
   /// `true` if the bridge discovery process needs to be canceled.
   bool cancelDiscovery = false;
+}
+
+/// The method used to discover bridges.
+enum BridgeDiscoveryMethod {
+  /// Searches the network for bridges using the mDNS method.
+  mdns,
+
+  /// Searches the network for bridges using the endpoint method.
+  endpoint,
+
+  /// Searches the network for bridges using both the mDNS and endpoint methods.
+  both;
 }

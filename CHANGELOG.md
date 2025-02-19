@@ -1,3 +1,7 @@
+## 2.0.0-beta.17 - February 19, 2025
+
+- Added the option to choose discovery method when discovering bridges
+
 ## 2.0.0-beta.16 - February 18, 2025
 
 - Moved repo, and made minor fixes
