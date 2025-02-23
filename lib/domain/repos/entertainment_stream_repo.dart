@@ -218,9 +218,7 @@ class EntertainmentStreamRepo {
   /// The `entertainmentConfigurationId` parameter is the ID of the
   /// entertainment configuration to send the data to.
   ///
-  /// The `channels` are the channels that are having their colors set, and what
-  /// color they are being set to. Note, any channel that is using RGB instead
-  /// of XY will be ignored.
+  /// The `commands` are the commands that are being sent to the bridge.
   ///
   /// Returns a list of bytes representing the packet.
   static List<int> getDataAsXy(
@@ -261,8 +259,7 @@ class EntertainmentStreamRepo {
   /// entertainment configuration to send the data to. Note, any channel that is
   /// using XY instead of RGB will be ignored.
   ///
-  /// The `channels` are the channels that are having their colors set, and what
-  /// color they are being set to.
+  /// The `commands` are the commands that are being sent to the bridge.
   ///
   /// Returns a list of bytes representing the packet.
   static List<int> getDataAsRgb(
@@ -270,26 +267,44 @@ class EntertainmentStreamRepo {
     List<EntertainmentStreamCommand> commands,
   ) {
     final List<int> packet =
+        // ignore: deprecated_member_use_from_same_package
         _getPacketBase(ColorMode.rgb, entertainmentConfigurationId);
 
     // Add every command to the packet.
     int counter = 0;
     for (final EntertainmentStreamCommand command in commands) {
-      // Skip any commands that are not using XY color space.
-      if (command.color is! ColorRgb) continue;
+      // Skip any commands that are not using RGB color space.
+      // ignore: deprecated_member_use_from_same_package
+      if (command.color is! ColorRgb || command.color is! ColorRgbNormalized) {
+        continue;
+      }
 
       // Only allow 20 commands per packet.
       if (counter >= 20) break;
 
       packet.add(command.channel);
 
-      packet.addAll(
-        _formatRgb(
-          (command.color as ColorRgb).r,
-          (command.color as ColorRgb).g,
-          (command.color as ColorRgb).b,
-        ),
-      );
+      // ignore: deprecated_member_use_from_same_package
+      if (command.color is ColorRgb) {
+        packet.addAll(
+          _formatRgb(
+            // ignore: deprecated_member_use_from_same_package
+            (command.color as ColorRgb).r,
+            // ignore: deprecated_member_use_from_same_package
+            (command.color as ColorRgb).g,
+            // ignore: deprecated_member_use_from_same_package
+            (command.color as ColorRgb).b,
+          ),
+        );
+      } else {
+        packet.addAll(
+          _formatRgbNormalized(
+            (command.color as ColorRgbNormalized).r,
+            (command.color as ColorRgbNormalized).g,
+            (command.color as ColorRgbNormalized).b,
+          ),
+        );
+      }
 
       counter++;
     }
@@ -318,6 +333,11 @@ class EntertainmentStreamRepo {
   /// Formats the given `r`, `g`, and `b` values into a list of bytes.
   static List<int> _formatRgb(int r, int g, int b) =>
       __colorToBytes(r / 255.0, g / 255.0, b / 255.0);
+
+  /// Formats the given normalized `r`, `g`, and `b` values into a list of
+  /// bytes.
+  static List<int> _formatRgbNormalized(double r, double g, double b) =>
+      __colorToBytes(r, g, b);
 
   /// Formats the given `a`, `b`, and `c` values into a list of bytes.
   static List<int> __colorToBytes(num a, num b, num c) {

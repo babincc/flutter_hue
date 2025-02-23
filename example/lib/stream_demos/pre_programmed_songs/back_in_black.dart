@@ -37,7 +37,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -59,7 +59,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -81,7 +81,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -103,7 +103,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -125,7 +125,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -147,7 +147,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.3),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.3),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -169,7 +169,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.1),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.1),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -191,7 +191,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 0.1),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.1),
         waitAfterAnimation: Duration(milliseconds: durationMillis),
       ),
     );
@@ -210,7 +210,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -229,7 +229,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -259,7 +259,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -289,7 +289,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -319,7 +319,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -349,7 +349,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -379,7 +379,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -409,7 +409,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -439,7 +439,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -469,7 +469,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -499,7 +499,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -529,7 +529,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -559,7 +559,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -589,7 +589,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -608,7 +608,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -627,7 +627,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -646,7 +646,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -665,7 +665,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -684,7 +684,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -703,7 +703,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -722,7 +722,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -741,7 +741,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -771,7 +771,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -801,7 +801,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -831,7 +831,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -861,7 +861,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -891,7 +891,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -921,7 +921,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -951,7 +951,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -981,7 +981,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1011,7 +1011,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1041,7 +1041,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1071,7 +1071,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1101,7 +1101,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1131,7 +1131,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1150,7 +1150,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1169,7 +1169,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1188,7 +1188,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1207,7 +1207,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1226,7 +1226,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1245,7 +1245,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1264,7 +1264,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1283,7 +1283,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1313,7 +1313,7 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _drumsChannel,
-        color: ColorXy.fromRgb(255, 255, 255, 1.0),
+        color: ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 1.0),
       ),
     );
 
@@ -1364,14 +1364,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1401,14 +1411,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1438,14 +1458,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1475,14 +1505,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1512,14 +1552,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1549,14 +1599,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1568,7 +1628,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -1577,7 +1642,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -1586,14 +1656,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1605,7 +1685,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -1614,7 +1699,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -1623,14 +1713,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1642,7 +1742,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -1651,7 +1756,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -1660,14 +1770,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1697,14 +1817,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1734,14 +1864,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1771,14 +1911,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1808,14 +1958,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1845,14 +2005,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1882,14 +2052,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1919,14 +2099,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1956,14 +2146,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -1993,14 +2193,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2030,14 +2240,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2067,14 +2287,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2104,14 +2334,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2141,14 +2381,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2178,14 +2428,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2215,14 +2475,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2234,7 +2504,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -2243,7 +2518,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -2252,14 +2532,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2271,7 +2561,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -2280,7 +2575,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -2289,14 +2589,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2308,7 +2618,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis1),
       ),
@@ -2317,7 +2632,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 0.5),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          0.5,
+        ),
         animationType: AnimationType.ease,
         animationDuration: Duration(milliseconds: durationMillis2),
       ),
@@ -2326,14 +2646,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2363,14 +2693,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2400,14 +2740,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2437,14 +2787,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2474,14 +2834,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2511,14 +2881,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2548,14 +2928,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2585,14 +2975,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2622,14 +3022,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2659,14 +3069,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2696,14 +3116,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2733,14 +3163,24 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel1,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
     commands.add(
       EntertainmentStreamCommand(
         channel: _guitarChannel2,
-        color: ColorXy.fromRgb(31, 17, 158, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.12156862745,
+          0.06666666666,
+          0.61960784313,
+          1.0,
+        ),
       ),
     );
 
@@ -2790,7 +3230,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _vocalsChannel,
-        color: ColorXy.fromRgb(55, 139, 184, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.21568627451,
+          0.54509803921,
+          0.72156862745,
+          1.0,
+        ),
       ),
     );
 
@@ -2809,7 +3254,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _vocalsChannel,
-        color: ColorXy.fromRgb(55, 139, 184, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.21568627451,
+          0.54509803921,
+          0.72156862745,
+          1.0,
+        ),
       ),
     );
 
@@ -2828,7 +3278,12 @@ class BackInBlack {
     commands.add(
       EntertainmentStreamCommand(
         channel: _vocalsChannel,
-        color: ColorXy.fromRgb(55, 139, 184, 1.0),
+        color: ColorXy.fromRgbNormalized(
+          0.21568627451,
+          0.54509803921,
+          0.72156862745,
+          1.0,
+        ),
       ),
     );
 

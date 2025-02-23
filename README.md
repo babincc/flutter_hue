@@ -49,7 +49,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  flutter_hue: ^2.0.0
+  flutter_hue: ^2.1.0
 ```
 
 Import it to each file you use it in:
@@ -203,8 +203,8 @@ EntertainmentConfiguration myEntertainmentStreamConfiguration =
 myEntertainmentStreamConfiguration.startStreaming(myBridge);
 
 // These are the colors that are used by the stream commands.
-final ColorXy red = ColorXy.fromRgb(255, 0, 0, 1.0);
-final ColorXy blue = ColorXy.fromRgb(0, 0, 255, 1.0);
+final ColorXy red = ColorXy.fromRgbNormalized(1.0, 0.0, 0.0, 1.0);
+final ColorXy blue = ColorXy.fromRgbNormalized(0.0, 0.0, 1.0, 1.0);
 
 // The amount of time the light will remain on each color before switching to
 // the next.

@@ -800,8 +800,8 @@ class _HomePageState extends State<HomePage> {
     _isStreamingPattern2 = false;
     _isStreamingPattern3 = false;
 
-    final ColorXy red = ColorXy.fromRgb(255, 0, 0, 1.0);
-    final ColorXy blue = ColorXy.fromRgb(0, 0, 255, 1.0);
+    final ColorXy red = ColorXy.fromRgbNormalized(1.0, 0.0, 0.0, 1.0);
+    final ColorXy blue = ColorXy.fromRgbNormalized(0.0, 0.0, 1.0, 1.0);
 
     final EntertainmentStreamCommand command1 = EntertainmentStreamCommand(
       channel: 0,
@@ -846,8 +846,8 @@ class _HomePageState extends State<HomePage> {
     _isStreamingPattern2 = true;
     _isStreamingPattern3 = false;
 
-    final ColorXy red = ColorXy.fromRgb(255, 0, 0, 1.0);
-    final ColorXy blue = ColorXy.fromRgb(0, 0, 255, 1.0);
+    final ColorXy red = ColorXy.fromRgbNormalized(1.0, 0.0, 0.0, 1.0);
+    final ColorXy blue = ColorXy.fromRgbNormalized(0.0, 0.0, 1.0, 1.0);
 
     final EntertainmentStreamCommand command1 = EntertainmentStreamCommand(
       channel: 0,
@@ -898,8 +898,8 @@ class _HomePageState extends State<HomePage> {
     _isStreamingPattern2 = false;
     _isStreamingPattern3 = true;
 
-    final ColorXy white = ColorXy.fromRgb(255, 255, 255, 0.5);
-    final ColorXy off = ColorXy.fromRgb(0, 0, 0, 0.0);
+    final ColorXy white = ColorXy.fromRgbNormalized(1.0, 1.0, 1.0, 0.5);
+    final ColorXy off = ColorXy.fromRgbNormalized(0.0, 0.0, 0.0, 0.0);
 
     // Continuously alternate between white and off for 500ms each.
     Timer.periodic(

@@ -58,7 +58,9 @@ class EntertainmentStreamPacket {
           entertainmentConfigurationId,
           formattedCommands,
         );
+      // ignore: deprecated_member_use_from_same_package
       case ColorMode.rgb:
+      case ColorMode.rgbNormalized:
         return EntertainmentStreamRepo.getDataAsRgb(
           entertainmentConfigurationId,
           formattedCommands,
