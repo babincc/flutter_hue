@@ -49,7 +49,7 @@ In the `pubspec.yaml` of your flutter project, add the following dependency:
 
 ```yaml
 dependencies:
-  flutter_hue: ^2.1.0
+  flutter_hue: ^2.1.1
 ```
 
 Import it to each file you use it in:
@@ -193,6 +193,8 @@ IconButton(
 ### Example 8 - Entertainment Streaming
 
 This example shows how to use Entertainment Streaming. It's important to note, you will need to use the official Philips Hue app to create entertainment areas before you can use Flutter Hue to interact with them. At the time of writing this, Philips does not give third party apps the ability to create entertainment areas.
+
+[Here is a video demonstration](https://drive.google.com/file/d/1vGiLQWDAegpOBXABdDD2IRx4XFSnZdjP/view?usp=sharing) of what you can do with entertainment streaming. In the example code, there is a _Back In Black_ section—this video shows that code in action (with the drums duplicated to two lights instead of just one).
 
 ```dart
 // Get one of your stream areas that you made in the official Hue app.

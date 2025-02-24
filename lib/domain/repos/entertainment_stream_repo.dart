@@ -180,7 +180,7 @@ class EntertainmentStreamRepo {
     ///
     /// - 0x00 for RGB
     /// - 0x01 for XY
-    final int colorModeValue = colorMode == ColorMode.xy ? 0x01 : 0x00;
+    final int colorModeValue = identical(colorMode, ColorMode.xy) ? 0x01 : 0x00;
 
     /// The second part of the packet.
     List<dynamic> part2 = [

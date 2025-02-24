@@ -1,3 +1,7 @@
+## 2.1.1 - February 23, 2025
+
+- Minor code change and update to docs
+
 ## 2.1.0 - February 23, 2025
 
 - Added support for Flutter's new way of handing colors as normalized values, 0.0-1.0 instead of 0-255

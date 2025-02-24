@@ -1,5 +1,5 @@
 // @author Christian Babin
-// @version 2.1.0
+// @version 2.1.1
 // https://github.com/babincc/flutter_hue/blob/master/lib/flutter_hue.dart
 
 export 'package:flutter_hue/constants/api_fields.dart';
