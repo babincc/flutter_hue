@@ -812,8 +812,8 @@ class ColorConverter {
     hexString = hexString.replaceAll('0x', '');
 
     if (hexString.length == 3) {
-      hexString = hexString.replaceAllMapped(
-          RegExp(r'(.)(.)'), (Match m) => '${m[1]}${m[1]}${m[2]}${m[2]}');
+      hexString =
+          hexString = hexString.split('').map((char) => '$char$char').join('');
     }
 
     if (hexString.length == 8) {

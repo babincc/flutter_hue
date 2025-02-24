@@ -1400,13 +1400,27 @@ void main() {
   group(
     'hex to',
     () {
-      const String hex1 = 'ffff0000';
-      const String hex2 = 'ff00ff00';
+      const String hex1 = '0xffff0000';
+      const String hex2 = '#ff00ff00';
       const String hex3 = 'ff0000ff';
       const String hex4 = 'ff808080';
       const String hex5 = 'ff000000';
       const String hex6 = 'ffffffff';
       const String hex7 = 'ff8a4888';
+
+      const String hex8 = '0xff0000';
+      const String hex9 = '#00ff00';
+      const String hex10 = '0000ff';
+      const String hex11 = '808080';
+      const String hex12 = '000000';
+      const String hex13 = 'ffffff';
+      const String hex14 = '8a4888';
+
+      const String hex15 = '0xf00';
+      const String hex16 = '#0f0';
+      const String hex17 = '00f';
+      const String hex18 = '000';
+      const String hex19 = 'fff';
 
       test(
         'xy',
@@ -1438,6 +1452,56 @@ void main() {
           expect(
             ColorConverter.hex2xy(hex7),
             [0.3209554122773742, 0.21993715851681886, 0.1181557673818057],
+          );
+
+          expect(
+            ColorConverter.hex2xy(hex8),
+            [0.6400744994567747, 0.32997051063169336, 0.2126],
+          );
+          expect(
+            ColorConverter.hex2xy(hex9),
+            [0.3, 0.6, 0.7152],
+          );
+          expect(
+            ColorConverter.hex2xy(hex10),
+            [0.1500166223404255, 0.060006648936170214, 0.0722],
+          );
+          expect(
+            ColorConverter.hex2xy(hex11),
+            [0.3127159072215825, 0.3290014805066622, 0.21586050011389923],
+          );
+          expect(
+            ColorConverter.hex2xy(hex12),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2xy(hex13),
+            [0.3127159072215825, 0.3290014805066623, 1.0],
+          );
+          expect(
+            ColorConverter.hex2xy(hex14),
+            [0.3209554122773742, 0.21993715851681886, 0.1181557673818057],
+          );
+
+          expect(
+            ColorConverter.hex2xy(hex15),
+            [0.6400744994567747, 0.32997051063169336, 0.2126],
+          );
+          expect(
+            ColorConverter.hex2xy(hex16),
+            [0.3, 0.6, 0.7152],
+          );
+          expect(
+            ColorConverter.hex2xy(hex17),
+            [0.1500166223404255, 0.060006648936170214, 0.0722],
+          );
+          expect(
+            ColorConverter.hex2xy(hex18),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2xy(hex19),
+            [0.3127159072215825, 0.3290014805066623, 1.0],
           );
         },
       );
@@ -1473,6 +1537,56 @@ void main() {
             ColorConverter.hex2rgb(hex7),
             [138, 72, 136],
           );
+
+          expect(
+            ColorConverter.hex2rgb(hex8),
+            [255, 0, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex9),
+            [0, 255, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex10),
+            [0, 0, 255],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex11),
+            [128, 128, 128],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex12),
+            [0, 0, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex13),
+            [255, 255, 255],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex14),
+            [138, 72, 136],
+          );
+
+          expect(
+            ColorConverter.hex2rgb(hex15),
+            [255, 0, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex16),
+            [0, 255, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex17),
+            [0, 0, 255],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex18),
+            [0, 0, 0],
+          );
+          expect(
+            ColorConverter.hex2rgb(hex19),
+            [255, 255, 255],
+          );
         },
       );
 
@@ -1506,6 +1620,56 @@ void main() {
           expect(
             ColorConverter.hex2rgb2(hex7),
             [0.5411764705882353, 0.2823529411764706, 0.5333333333333333],
+          );
+
+          expect(
+            ColorConverter.hex2rgb2(hex8),
+            [1.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex9),
+            [0.0, 1.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex10),
+            [0.0, 0.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex11),
+            [0.5019607843137255, 0.5019607843137255, 0.5019607843137255],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex12),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex13),
+            [1.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex14),
+            [0.5411764705882353, 0.2823529411764706, 0.5333333333333333],
+          );
+
+          expect(
+            ColorConverter.hex2rgb2(hex15),
+            [1.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex16),
+            [0.0, 1.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex17),
+            [0.0, 0.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex18),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2rgb2(hex19),
+            [1.0, 1.0, 1.0],
           );
         },
       );
@@ -1541,6 +1705,56 @@ void main() {
             ColorConverter.hex2hsv(hex7),
             [301.8181818181818, 0.47826086956521735, 0.5411764705882353],
           );
+
+          expect(
+            ColorConverter.hex2hsv(hex8),
+            [0.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex9),
+            [120.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex10),
+            [240.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex11),
+            [0.0, 0.0, 0.5019607843137255],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex12),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex13),
+            [0.0, 0.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex14),
+            [301.8181818181818, 0.47826086956521735, 0.5411764705882353],
+          );
+
+          expect(
+            ColorConverter.hex2hsv(hex15),
+            [0.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex16),
+            [120.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex17),
+            [240.0, 1.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex18),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2hsv(hex19),
+            [0.0, 0.0, 1.0],
+          );
         },
       );
 
@@ -1574,6 +1788,56 @@ void main() {
           expect(
             ColorConverter.hex2hsl(hex7),
             [301.8181818181818, 0.3142857142857143, 0.4117647058823529],
+          );
+
+          expect(
+            ColorConverter.hex2hsl(hex8),
+            [0.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex9),
+            [120.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex10),
+            [240.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex11),
+            [0.0, 0.0, 0.5019607843137255],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex12),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex13),
+            [0.0, 0.0, 1.0],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex14),
+            [301.8181818181818, 0.3142857142857143, 0.4117647058823529],
+          );
+
+          expect(
+            ColorConverter.hex2hsl(hex15),
+            [0.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex16),
+            [120.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex17),
+            [240.0, 1.0, 0.5],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex18),
+            [0.0, 0.0, 0.0],
+          );
+          expect(
+            ColorConverter.hex2hsl(hex19),
+            [0.0, 0.0, 1.0],
           );
         },
       );
@@ -1609,6 +1873,56 @@ void main() {
             ColorConverter.hex2color(hex7),
             const Color(0xff8a4888),
           );
+
+          expect(
+            ColorConverter.hex2color(hex8),
+            const Color(0xffff0000),
+          );
+          expect(
+            ColorConverter.hex2color(hex9),
+            const Color(0xff00ff00),
+          );
+          expect(
+            ColorConverter.hex2color(hex10),
+            const Color(0xff0000ff),
+          );
+          expect(
+            ColorConverter.hex2color(hex11),
+            const Color(0xff808080),
+          );
+          expect(
+            ColorConverter.hex2color(hex12),
+            const Color(0xff000000),
+          );
+          expect(
+            ColorConverter.hex2color(hex13),
+            const Color(0xffffffff),
+          );
+          expect(
+            ColorConverter.hex2color(hex14),
+            const Color(0xff8a4888),
+          );
+
+          expect(
+            ColorConverter.hex2color(hex15),
+            const Color(0xffff0000),
+          );
+          expect(
+            ColorConverter.hex2color(hex16),
+            const Color(0xff00ff00),
+          );
+          expect(
+            ColorConverter.hex2color(hex17),
+            const Color(0xff0000ff),
+          );
+          expect(
+            ColorConverter.hex2color(hex18),
+            const Color(0xff000000),
+          );
+          expect(
+            ColorConverter.hex2color(hex19),
+            const Color(0xffffffff),
+          );
         },
       );
 
@@ -1643,6 +1957,56 @@ void main() {
             ColorConverter.hex2int(hex7),
             4287252616,
           );
+
+          expect(
+            ColorConverter.hex2int(hex8),
+            4294901760,
+          );
+          expect(
+            ColorConverter.hex2int(hex9),
+            4278255360,
+          );
+          expect(
+            ColorConverter.hex2int(hex10),
+            4278190335,
+          );
+          expect(
+            ColorConverter.hex2int(hex11),
+            4286611584,
+          );
+          expect(
+            ColorConverter.hex2int(hex12),
+            4278190080,
+          );
+          expect(
+            ColorConverter.hex2int(hex13),
+            4294967295,
+          );
+          expect(
+            ColorConverter.hex2int(hex14),
+            4287252616,
+          );
+
+          expect(
+            ColorConverter.hex2int(hex15),
+            4294901760,
+          );
+          expect(
+            ColorConverter.hex2int(hex16),
+            4278255360,
+          );
+          expect(
+            ColorConverter.hex2int(hex17),
+            4278190335,
+          );
+          expect(
+            ColorConverter.hex2int(hex18),
+            4278190080,
+          );
+          expect(
+            ColorConverter.hex2int(hex19),
+            4294967295,
+          );
         },
       );
 
@@ -1650,39 +2014,104 @@ void main() {
         'colorXy',
         () {
           final List<double> rgb1 = ColorConverter.hex2rgb2(hex1);
+          final ColorXy expectedColor1 =
+              ColorXy.fromRgbNormalized(rgb1[0], rgb1[1], rgb1[2]);
+          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
+          final ColorXy expectedColor2 =
+              ColorXy.fromRgbNormalized(rgb2[0], rgb2[1], rgb2[2]);
+          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
+          final ColorXy expectedColor3 =
+              ColorXy.fromRgbNormalized(rgb3[0], rgb3[1], rgb3[2]);
+          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
+          final ColorXy expectedColor4 =
+              ColorXy.fromRgbNormalized(rgb4[0], rgb4[1], rgb4[2]);
+          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
+          final ColorXy expectedColor5 =
+              ColorXy.fromRgbNormalized(rgb5[0], rgb5[1], rgb5[2]);
+          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
+          final ColorXy expectedColor6 =
+              ColorXy.fromRgbNormalized(rgb6[0], rgb6[1], rgb6[2]);
+          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
+          final ColorXy expectedColor7 =
+              ColorXy.fromRgbNormalized(rgb7[0], rgb7[1], rgb7[2]);
+
           expect(
             ColorConverter.hex2colorXy(hex1),
-            ColorXy.fromRgbNormalized(rgb1[0], rgb1[1], rgb1[2]),
+            expectedColor1,
           );
-          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
           expect(
             ColorConverter.hex2colorXy(hex2),
-            ColorXy.fromRgbNormalized(rgb2[0], rgb2[1], rgb2[2]),
+            expectedColor2,
           );
-          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
           expect(
             ColorConverter.hex2colorXy(hex3),
-            ColorXy.fromRgbNormalized(rgb3[0], rgb3[1], rgb3[2]),
+            expectedColor3,
           );
-          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
           expect(
             ColorConverter.hex2colorXy(hex4),
-            ColorXy.fromRgbNormalized(rgb4[0], rgb4[1], rgb4[2]),
+            expectedColor4,
           );
-          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
           expect(
             ColorConverter.hex2colorXy(hex5),
-            ColorXy.fromRgbNormalized(rgb5[0], rgb5[1], rgb5[2]),
+            expectedColor5,
           );
-          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
           expect(
             ColorConverter.hex2colorXy(hex6),
-            ColorXy.fromRgbNormalized(rgb6[0], rgb6[1], rgb6[2]),
+            expectedColor6,
           );
-          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
           expect(
             ColorConverter.hex2colorXy(hex7),
-            ColorXy.fromRgbNormalized(rgb7[0], rgb7[1], rgb7[2]),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorXy(hex8),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex9),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex10),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex11),
+            expectedColor4,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex12),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex13),
+            expectedColor6,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex14),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorXy(hex15),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex16),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex17),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex18),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorXy(hex19),
+            expectedColor6,
           );
         },
       );
@@ -1691,39 +2120,104 @@ void main() {
         'colorRgb',
         () {
           final List<double> rgb1 = ColorConverter.hex2rgb2(hex1);
+          final ColorRgb expectedColor1 =
+              ColorRgb.fromRgbNormalized(rgb1[0], rgb1[1], rgb1[2]);
+          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
+          final ColorRgb expectedColor2 =
+              ColorRgb.fromRgbNormalized(rgb2[0], rgb2[1], rgb2[2]);
+          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
+          final ColorRgb expectedColor3 =
+              ColorRgb.fromRgbNormalized(rgb3[0], rgb3[1], rgb3[2]);
+          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
+          final ColorRgb expectedColor4 =
+              ColorRgb.fromRgbNormalized(rgb4[0], rgb4[1], rgb4[2]);
+          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
+          final ColorRgb expectedColor5 =
+              ColorRgb.fromRgbNormalized(rgb5[0], rgb5[1], rgb5[2]);
+          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
+          final ColorRgb expectedColor6 =
+              ColorRgb.fromRgbNormalized(rgb6[0], rgb6[1], rgb6[2]);
+          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
+          final ColorRgb expectedColor7 =
+              ColorRgb.fromRgbNormalized(rgb7[0], rgb7[1], rgb7[2]);
+
           expect(
             ColorConverter.hex2colorRgb(hex1),
-            ColorRgb.fromRgbNormalized(rgb1[0], rgb1[1], rgb1[2]),
+            expectedColor1,
           );
-          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
           expect(
             ColorConverter.hex2colorRgb(hex2),
-            ColorRgb.fromRgbNormalized(rgb2[0], rgb2[1], rgb2[2]),
+            expectedColor2,
           );
-          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
           expect(
             ColorConverter.hex2colorRgb(hex3),
-            ColorRgb.fromRgbNormalized(rgb3[0], rgb3[1], rgb3[2]),
+            expectedColor3,
           );
-          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
           expect(
             ColorConverter.hex2colorRgb(hex4),
-            ColorRgb.fromRgbNormalized(rgb4[0], rgb4[1], rgb4[2]),
+            expectedColor4,
           );
-          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
           expect(
             ColorConverter.hex2colorRgb(hex5),
-            ColorRgb.fromRgbNormalized(rgb5[0], rgb5[1], rgb5[2]),
+            expectedColor5,
           );
-          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
           expect(
             ColorConverter.hex2colorRgb(hex6),
-            ColorRgb.fromRgbNormalized(rgb6[0], rgb6[1], rgb6[2]),
+            expectedColor6,
           );
-          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
           expect(
             ColorConverter.hex2colorRgb(hex7),
-            ColorRgb.fromRgbNormalized(rgb7[0], rgb7[1], rgb7[2]),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorRgb(hex8),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex9),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex10),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex11),
+            expectedColor4,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex12),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex13),
+            expectedColor6,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex14),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorRgb(hex15),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex16),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex17),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex18),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorRgb(hex19),
+            expectedColor6,
           );
         },
       );
@@ -1732,39 +2226,104 @@ void main() {
         'colorRgbNormalized',
         () {
           final List<double> rgb1 = ColorConverter.hex2rgb2(hex1);
+          final ColorRgbNormalized expectedColor1 =
+              ColorRgbNormalized(rgb1[0], rgb1[1], rgb1[2]);
+          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
+          final ColorRgbNormalized expectedColor2 =
+              ColorRgbNormalized(rgb2[0], rgb2[1], rgb2[2]);
+          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
+          final ColorRgbNormalized expectedColor3 =
+              ColorRgbNormalized(rgb3[0], rgb3[1], rgb3[2]);
+          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
+          final ColorRgbNormalized expectedColor4 =
+              ColorRgbNormalized(rgb4[0], rgb4[1], rgb4[2]);
+          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
+          final ColorRgbNormalized expectedColor5 =
+              ColorRgbNormalized(rgb5[0], rgb5[1], rgb5[2]);
+          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
+          final ColorRgbNormalized expectedColor6 =
+              ColorRgbNormalized(rgb6[0], rgb6[1], rgb6[2]);
+          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
+          final ColorRgbNormalized expectedColor7 =
+              ColorRgbNormalized(rgb7[0], rgb7[1], rgb7[2]);
+
           expect(
             ColorConverter.hex2colorRgbNormalized(hex1),
-            ColorRgbNormalized(rgb1[0], rgb1[1], rgb1[2]),
+            expectedColor1,
           );
-          final List<double> rgb2 = ColorConverter.hex2rgb2(hex2);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex2),
-            ColorRgbNormalized(rgb2[0], rgb2[1], rgb2[2]),
+            expectedColor2,
           );
-          final List<double> rgb3 = ColorConverter.hex2rgb2(hex3);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex3),
-            ColorRgbNormalized(rgb3[0], rgb3[1], rgb3[2]),
+            expectedColor3,
           );
-          final List<double> rgb4 = ColorConverter.hex2rgb2(hex4);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex4),
-            ColorRgbNormalized(rgb4[0], rgb4[1], rgb4[2]),
+            expectedColor4,
           );
-          final List<double> rgb5 = ColorConverter.hex2rgb2(hex5);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex5),
-            ColorRgbNormalized(rgb5[0], rgb5[1], rgb5[2]),
+            expectedColor5,
           );
-          final List<double> rgb6 = ColorConverter.hex2rgb2(hex6);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex6),
-            ColorRgbNormalized(rgb6[0], rgb6[1], rgb6[2]),
+            expectedColor6,
           );
-          final List<double> rgb7 = ColorConverter.hex2rgb2(hex7);
           expect(
             ColorConverter.hex2colorRgbNormalized(hex7),
-            ColorRgbNormalized(rgb7[0], rgb7[1], rgb7[2]),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex8),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex9),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex10),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex11),
+            expectedColor4,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex12),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex13),
+            expectedColor6,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex14),
+            expectedColor7,
+          );
+
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex15),
+            expectedColor1,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex16),
+            expectedColor2,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex17),
+            expectedColor3,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex18),
+            expectedColor5,
+          );
+          expect(
+            ColorConverter.hex2colorRgbNormalized(hex19),
+            expectedColor6,
           );
         },
       );

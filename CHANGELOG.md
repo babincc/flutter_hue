@@ -1,3 +1,7 @@
+## 2.1.2 - February 24, 2025
+
+- Fixed a bug with hex color conversions
+
 ## 2.1.1 - February 23, 2025
 
 - Minor code change and update to docs
