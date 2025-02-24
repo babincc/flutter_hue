@@ -8,7 +8,7 @@ Note: This SDK uses Philips Hue's new API v2.
 
 With Flutter Hue, developers can easily discover Hue bridges on the network, establish communication with them, and manipulate their connected devices. All of this is shown in the examples below. Also shown is how to change the color of lights and turning them on and off.
 
-**NOTE:** If your project does not use Flutter and requires pure Dart, you can use [dart_hue](https://pub.dev/packages/dart_hue). Some features, such as local storage, are not provided and become the developer's responsibility in the pure Dart version.
+**NOTE:** If your project does not use Flutter and requires pure Dart, you can use <a href="https://pub.dev/packages/dart_hue" target="_blank">dart_hue</a>. Some features, such as local storage, are not provided and become the developer's responsibility in the pure Dart version.
 
 <div style="background-color: #101010; border-radius: 25px;" align="center">
 	</br>
@@ -64,7 +64,7 @@ import 'package:flutter_hue/flutter_hue.dart';
 
 Without doing this, your app will only be able to communicate with Philips Hue bridges that are on the same network as the user's device. This section will show you how to establish a remote connection with a bridge; that way, it can be controlled from anywhere in the world.
 
-Due to the length of these instructions, they have been placed in their own document, [here](https://github.com/babincc/flutter_hue/blob/master/remote_connection_instructions.md).
+Due to the length of these instructions, they have been placed in their own document, <a href="https://github.com/babincc/flutter_hue/blob/master/remote_connection_instructions.md" target="_blank">here</a>.
 
 Once you have completed the steps in the above document, you will be able to communicate with a bridge remotely using the same steps as all of the examples below.
 
@@ -194,7 +194,7 @@ IconButton(
 
 This example shows how to use Entertainment Streaming. It's important to note, you will need to use the official Philips Hue app to create entertainment areas before you can use Flutter Hue to interact with them. At the time of writing this, Philips does not give third party apps the ability to create entertainment areas.
 
-[Here is a video demonstration](https://drive.google.com/file/d/1vGiLQWDAegpOBXABdDD2IRx4XFSnZdjP/view?usp=sharing) of what you can do with entertainment streaming. In the example code, there is a _Back In Black_ section—this video shows that code in action (with the drums duplicated to two lights instead of just one).
+<a href="https://drive.google.com/file/d/1vGiLQWDAegpOBXABdDD2IRx4XFSnZdjP/view?usp=sharing" target="_blank">Here is a video demonstration</a> of what can be done with entertainment streaming. In the example code, there is a _Back In Black_ section—this video shows that code in action (with the drums duplicated to two lights instead of just one).
 
 ```dart
 // Get one of your stream areas that you made in the official Hue app.
