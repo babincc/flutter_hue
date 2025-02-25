@@ -243,6 +243,9 @@ class EntertainmentConfiguration extends Resource {
   /// Handles the entertainment stream.
   late final EntertainmentStreamController _entertainmentStream;
 
+  /// Whether or not the entertainment stream is actively streaming.
+  bool get isStreaming => _entertainmentStream.isStreaming;
+
   /// Start streaming for `this` entertainment configuration.
   ///
   /// The `bridge` parameter is the bridge to establish the handshake with.
@@ -306,6 +309,10 @@ class EntertainmentConfiguration extends Resource {
 
   /// Empties the queue.
   void flushStreamQueue() => _entertainmentStream.flushQueue();
+
+  /// Empties the queue for the given `channel` only.
+  void flushChannelQueue(int channel) =>
+      _entertainmentStream.flushQueueChannel(channel);
 
   /// Empty the queue and replace it with `newQueue`.
   ///

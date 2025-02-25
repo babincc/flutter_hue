@@ -1,3 +1,8 @@
+## 2.2.0 - February 25, 2025
+
+- Added a way to see if entertainment stream is active with `isStreaming`
+- Added a method to flush a specific channel from the entertainment stream configuration with `flushChannelQueue`
+
 ## 2.1.2 - February 24, 2025
 
 - Fixed a bug with hex color conversions

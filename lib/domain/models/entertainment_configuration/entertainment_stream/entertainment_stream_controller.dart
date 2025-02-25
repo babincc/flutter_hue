@@ -60,6 +60,9 @@ class EntertainmentStreamController {
   /// Sends [_currentPacket] to the bridge.
   Timer? _sendTimer;
 
+  /// Whether or not the entertainment stream is actively streaming.
+  bool get isStreaming => _sendTimer != null && _sendTimer!.isActive;
+
   /// Counts the number of times a frame of time was skipped instead of sending
   /// data.
   ///
