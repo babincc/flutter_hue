@@ -83,6 +83,14 @@ class _HomePageState extends State<HomePage> {
   /// Watches for deep links.
   late final StreamSubscription deepLinkStream;
 
+  /// Custom method to encrypt the remote token state.
+  String Function(String)? stateEncrypter =
+      (plaintext) => 'abcd${plaintext}1234';
+
+  /// Custom method to decrypt the remote token state.
+  String Function(String)? stateDecrypter =
+      (ciphertext) => ciphertext.substring(4, ciphertext.length - 4);
+
   @override
   void initState() {
     super.initState();
@@ -116,8 +124,7 @@ class _HomePageState extends State<HomePage> {
               pkce: pkce,
               code: code,
               stateSecret: stateSecret,
-              decrypter: (ciphertext) =>
-                  ciphertext.substring(4, ciphertext.length - 4),
+              decrypter: stateDecrypter,
             );
           }
         } catch (_) {
@@ -133,7 +140,7 @@ class _HomePageState extends State<HomePage> {
       clientSecret: widget.clientSecret,
       redirectUri: 'flutterhue://auth',
       deviceName: 'TestDevice',
-      stateEncrypter: (plaintext) => 'abcd${plaintext}1234',
+      stateEncrypter: stateEncrypter,
     );
 
     // Fetch all of the bridges that have been connected to in the past.
@@ -577,7 +584,7 @@ class _HomePageState extends State<HomePage> {
       clientId: widget.clientId,
       redirectUri: 'flutterhue://auth',
       deviceName: 'TestDevice',
-      encrypter: (plaintext) => 'abcd${plaintext}1234',
+      encrypter: stateEncrypter,
     );
 
     setState(() {
@@ -938,10 +945,12 @@ class _HomePageState extends State<HomePage> {
     bool isStreaming = this.isStreaming;
 
     try {
+      print('Stopping stream...');
       await hueNetwork!.entertainmentConfigurations.first
           .stopStreaming(bridge!)
           .then(
         (value) {
+          print('Stopped stream: $value');
           if (value) {
             isStreaming = false;
           }

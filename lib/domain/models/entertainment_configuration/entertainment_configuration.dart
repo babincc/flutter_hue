@@ -283,7 +283,7 @@ class EntertainmentConfiguration extends Resource {
     Bridge bridge, {
     String Function(String ciphertext)? decrypter,
   }) async =>
-      _entertainmentStream.stopStreaming(
+      await _entertainmentStream.stopStreaming(
         bridge,
         decrypter: decrypter,
       );

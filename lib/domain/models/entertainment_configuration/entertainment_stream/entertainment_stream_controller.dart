@@ -168,10 +168,15 @@ class EntertainmentStreamController {
             );
 
             try {
-              await EntertainmentStreamRepo.sendData(
+              final bool didSend = await EntertainmentStreamRepo.sendData(
                 _dtlsData,
                 packet.toBytes(),
               );
+
+              if (!didSend) {
+                _numSkips++;
+                return;
+              }
             } catch (e) {
               _numSkips++;
               return;
