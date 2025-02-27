@@ -1,3 +1,7 @@
+## 2.2.1 - February 27, 2025
+
+- Fixed bug where `stopStreaming` would freeze the app
+
 ## 2.2.0 - February 25, 2025
 
 - Added a way to see if entertainment stream is active with `isStreaming`

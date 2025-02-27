@@ -945,12 +945,10 @@ class _HomePageState extends State<HomePage> {
     bool isStreaming = this.isStreaming;
 
     try {
-      print('Stopping stream...');
       await hueNetwork!.entertainmentConfigurations.first
           .stopStreaming(bridge!)
           .then(
         (value) {
-          print('Stopped stream: $value');
           if (value) {
             isStreaming = false;
           }

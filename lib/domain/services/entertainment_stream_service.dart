@@ -95,6 +95,8 @@ class EntertainmentStreamService {
       return false;
     }
 
+    dtlsData.connection?.listen((_) async {});
+
     return true;
   }
 
