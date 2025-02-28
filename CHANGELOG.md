@@ -1,3 +1,7 @@
+## 2.2.2 - February 27, 2025
+
+- Fixed bug where setting an animation duration of zero fails the assertion in the constructor of entertainment stream commands
+
 ## 2.2.1 - February 27, 2025
 
 - Fixed bug where `stopStreaming` would freeze the app

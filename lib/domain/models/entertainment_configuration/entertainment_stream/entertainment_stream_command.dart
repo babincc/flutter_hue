@@ -7,9 +7,9 @@ class EntertainmentStreamCommand {
     this.animationDuration,
     this.waitAfterAnimation,
     this.animationType = AnimationType.none,
-  })  : assert(animationDuration == null || animationDuration > Duration.zero),
+  })  : assert(animationDuration == null || animationDuration >= Duration.zero),
         assert(
-            waitAfterAnimation == null || waitAfterAnimation > Duration.zero),
+            waitAfterAnimation == null || waitAfterAnimation >= Duration.zero),
         _currentColor = null;
 
   /// The channel that this command is for.
