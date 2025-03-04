@@ -1,3 +1,7 @@
+## 2.2.3 - March 3, 2025
+
+- Fixed bug where grouped lights weren't being PUT correctly
+
 ## 2.2.2 - February 27, 2025
 
 - Fixed bug where setting an animation duration of zero fails the assertion in the constructor of entertainment stream commands

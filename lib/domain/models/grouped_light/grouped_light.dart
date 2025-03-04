@@ -431,7 +431,9 @@ class GroupedLight extends Resource {
       if (!(_originalXy == null && xy == null) &&
           (((_originalXy != null && xy != null) && (_originalXy != xy)) ||
               (_originalXy == null || xy == null))) {
-        toReturn[ApiFields.xy] = xy?.toJson(optimizeFor: OptimizeFor.putFull);
+        toReturn[ApiFields.color] = {
+          ApiFields.xy: xy?.toJson(optimizeFor: OptimizeFor.putFull)
+        };
       }
 
       if (alert != _originalAlert) {
