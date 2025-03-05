@@ -19,6 +19,7 @@ class Entertainment extends Resource {
     this.idV1 = '',
     required this.owner,
     required this.isRenderer,
+    required this.rendererReference,
     required this.isProxy,
     required this.isEqualizer,
     required this.maxStreams,
@@ -39,6 +40,8 @@ class Entertainment extends Resource {
       owner: Relative.fromJson(
           Map<String, dynamic>.from(data[ApiFields.owner] ?? {})),
       isRenderer: data[ApiFields.isRenderer] ?? false,
+      rendererReference: Relative.fromJson(
+          Map<String, dynamic>.from(data[ApiFields.rendererReference] ?? {})),
       isProxy: data[ApiFields.isProxy] ?? false,
       isEqualizer: data[ApiFields.isEqualizer] ?? false,
       maxStreams: data[ApiFields.maxStreams] ?? 1,
@@ -52,6 +55,7 @@ class Entertainment extends Resource {
       : idV1 = '',
         owner = Relative.empty(),
         isRenderer = false,
+        rendererReference = Relative.empty(),
         isProxy = false,
         isEqualizer = false,
         maxStreams = 1,
@@ -80,6 +84,18 @@ class Entertainment extends Resource {
 
   /// Whether or not a lamp can be used for entertainment streaming as renderer.
   final bool isRenderer;
+
+  /// Indicates which light service is linked to this entertainment service
+  final Relative rendererReference;
+
+  /// Returns a [Resource] object that represents the [rendererReference] of
+  /// this [Resource].
+  ///
+  /// Throws [MissingHueNetworkException] if the [hueNetwork] is null, if the
+  /// [rendererReference] cannot be found on the [hueNetwork], or if the
+  /// [rendererReference]'s [ResourceType] cannot be found on the [hueNetwork].
+  Resource get rendererReferenceAsResource =>
+      getRelativeAsResource(rendererReference);
 
   /// Whether or not a lamp can be used for entertainment streaming as a proxy
   /// node.
@@ -114,6 +130,7 @@ class Entertainment extends Resource {
     String? idV1,
     Relative? owner,
     bool? isRenderer,
+    Relative? rendererReference,
     bool? isProxy,
     bool? isEqualizer,
     int? maxStreams,
@@ -127,6 +144,10 @@ class Entertainment extends Resource {
       owner:
           owner ?? this.owner.copyWith(copyOriginalValues: copyOriginalValues),
       isRenderer: isRenderer ?? this.isRenderer,
+      rendererReference: rendererReference ??
+          this
+              .rendererReference
+              .copyWith(copyOriginalValues: copyOriginalValues),
       isProxy: isProxy ?? this.isProxy,
       isEqualizer: isEqualizer ?? this.isEqualizer,
       maxStreams: maxStreams ?? this.maxStreams,
@@ -183,6 +204,8 @@ class Entertainment extends Resource {
       ApiFields.idV1: idV1,
       ApiFields.owner: owner.toJson(optimizeFor: optimizeFor),
       ApiFields.isRenderer: isRenderer,
+      ApiFields.rendererReference:
+          rendererReference.toJson(optimizeFor: optimizeFor),
       ApiFields.isProxy: isProxy,
       ApiFields.isEqualizer: isEqualizer,
       ApiFields.maxStreams: maxStreams,
@@ -202,6 +225,7 @@ class Entertainment extends Resource {
         other.idV1 == idV1 &&
         other.owner == owner &&
         other.isRenderer == isRenderer &&
+        other.rendererReference == rendererReference &&
         other.isProxy == isProxy &&
         other.isEqualizer == isEqualizer &&
         other.maxStreams == maxStreams &&
@@ -215,6 +239,7 @@ class Entertainment extends Resource {
         idV1,
         owner,
         isRenderer,
+        rendererReference,
         isProxy,
         isEqualizer,
         maxStreams,

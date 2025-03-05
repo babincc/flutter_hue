@@ -286,6 +286,8 @@ class ApiFields {
 
   static const String relativeRotary = 'relative_rotary';
 
+  static const String rendererReference = 'renderer_reference';
+
   static const String responseType = 'response_type';
 
   static const String rid = 'rid';
