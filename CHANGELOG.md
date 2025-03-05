@@ -1,3 +1,7 @@
+## 2.3.0 - March 4, 2025
+
+- Added `rendererReference` to the `Entertainment` object
+
 ## 2.2.3 - March 3, 2025
 
 - Fixed bug where grouped lights weren't being PUT correctly

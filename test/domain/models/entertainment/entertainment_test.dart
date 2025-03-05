@@ -17,6 +17,10 @@ void main() {
       id: '1a2b3c4d-5e6f-7a8b-9c0d-ef1a2b3c4d5e',
     ),
     isRenderer: false,
+    rendererReference: Relative(
+      type: ResourceType.light,
+      id: 'a12b3c4d-5e6f-7a8b-9c0d-ef1a2b3c4d5e',
+    ),
     isProxy: false,
     isEqualizer: false,
     maxStreams: 2,
