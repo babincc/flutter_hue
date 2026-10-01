@@ -25,15 +25,20 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the RGB values. [r, g, b]
   static List<double> xy2rgb2(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final double z = 1.0 - x - y;
     final double Y = brightness;
@@ -79,15 +84,20 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSV values. [h, s, v]
   static List<double> xy2hsv(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final List<double> rgb = xy2rgb2(x, y, brightness);
     return rgb2hsv2(rgb[0], rgb[1], rgb[2]);
@@ -97,15 +107,20 @@ class ColorConverter {
   ///
   /// Returns a string representing the hex value. ffffffff
   static String xy2hex(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final List<double> rgb = xy2rgb2(x, y, brightness);
     return rgb2hex2(rgb[0], rgb[1], rgb[2]);
@@ -115,15 +130,20 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSL values. [h, s, l]
   static List<double> xy2hsl(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final List<double> rgb = xy2rgb2(x, y, brightness);
     return rgb2hsl2(rgb[0], rgb[1], rgb[2]);
@@ -131,15 +151,20 @@ class ColorConverter {
 
   /// Converts xy coordinates in the CIE 1931 color space to a Flutter Color.
   static Color xy2color(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final List<double> rgb = xy2rgb2(x, y, brightness);
     return rgb2color2(rgb[0], rgb[1], rgb[2]);
@@ -147,15 +172,20 @@ class ColorConverter {
 
   /// Converts xy coordinates in the CIE 1931 color space to an integer.
   static int xy2int(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     final List<double> rgb = xy2rgb2(x, y, brightness);
     return rgb2int2(rgb[0], rgb[1], rgb[2]);
@@ -163,15 +193,20 @@ class ColorConverter {
 
   /// Converts xy coordinates in the CIE 1931 color space to a [ColorXy] object.
   static ColorXy xy2colorXy(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     return ColorXy(x, y, brightness);
   }
@@ -180,15 +215,20 @@ class ColorConverter {
   /// object.
   @Deprecated('Use xy2colorRgbNormalized instead')
   static ColorRgb xy2colorRgb(double x, double y, [double brightness = 1.0]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     return ColorRgb.fromXy(x, y, brightness);
   }
@@ -200,15 +240,20 @@ class ColorConverter {
     double y, [
     double brightness = 1.0,
   ]) {
-    assert(x >= 0.0 && x <= 1.0,
-        'x must be greater than or equal to 0 and less than or equal to 1');
-    assert(y >= 0.0 && y <= 1.0,
-        'y must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      x >= 0.0 && x <= 1.0,
+      'x must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      y >= 0.0 && y <= 1.0,
+      'y must be greater than or equal to 0 and less than or equal to 1',
+    );
     assert(x + y <= 1.0, 'x + y must be less than or equal to 1');
     assert(
-        brightness >= 0.0 && brightness <= 1.0,
-        'brightness must be greater than or equal to 0 and less than or equal '
-        'to 1');
+      brightness >= 0.0 && brightness <= 1.0,
+      'brightness must be greater than or equal to 0 and less than or equal '
+      'to 1',
+    );
 
     return ColorRgbNormalized.fromXy(x, y, brightness);
   }
@@ -218,12 +263,18 @@ class ColorConverter {
   /// Returns a list of doubles representing the xy values. [x, y, brightness]
   @Deprecated('Use rgb2xy2 instead')
   static List<double> rgb2xy(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     if (r == 0 && g == 0 && b == 0) return [0.0, 0.0, 0.0];
 
@@ -240,12 +291,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the xy values. [x, y, brightness]
   static List<double> rgb2xy2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     if (r == 0.0 && g == 0.0 && b == 0.0) return [0.0, 0.0, 0.0];
 
@@ -284,12 +341,18 @@ class ColorConverter {
   /// Returns a list of doubles representing the HSV values. [h, s, v]
   @Deprecated('Use rgb2hsv2 instead')
   static List<double> rgb2hsv(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     final double R = r / 255.0;
     final double G = g / 255.0;
@@ -302,12 +365,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSV values. [h, s, v]
   static List<double> rgb2hsv2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final double maximum = max(r, max(g, b));
     final double minimum = min(r, min(g, b));
@@ -348,12 +417,18 @@ class ColorConverter {
   /// Returns a string representing the hex value. ffffffff
   @Deprecated('Use rgb2hex2 instead')
   static String rgb2hex(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return rgb2hex2(r / 255.0, g / 255.0, b / 255.0);
   }
@@ -362,12 +437,18 @@ class ColorConverter {
   ///
   /// Returns a string representing the hex value. ffffffff
   static String rgb2hex2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final int integer = rgb2int2(r, g, b);
     return int2hex(integer);
@@ -378,12 +459,18 @@ class ColorConverter {
   /// Returns a list of doubles representing the HSL values. [h, s, l]
   @Deprecated('Use rgb2hsl2 instead')
   static List<double> rgb2hsl(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     final double R = r / 255.0;
     final double G = g / 255.0;
@@ -396,12 +483,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSL values. [h, s, l]
   static List<double> rgb2hsl2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final double maximum = max(r, max(g, b));
     final double minimum = min(r, min(g, b));
@@ -444,24 +537,36 @@ class ColorConverter {
   /// Converts RGB (0-255) values to a Flutter Color object.
   @Deprecated('Use rgb2color2 instead')
   static Color rgb2color(int r, int g, int b, [int a = 255]) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return rgb2color2(r / 255.0, g / 255.0, b / 255.0, a / 255.0);
   }
 
   /// Converts normalized RGB (0.0-1.0) values to a Flutter Color object.
   static Color rgb2color2(double r, double g, double b, [double a = 1.0]) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     return Color.from(alpha: a, red: r, green: g, blue: b);
   }
@@ -469,24 +574,36 @@ class ColorConverter {
   /// Converts RGB (0-255) values to an integer.
   @Deprecated('Use rgb2int2 instead')
   static int rgb2int(int r, int g, int b, [int a = 255]) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return rgb2int2(r / 255.0, g / 255.0, b / 255.0, a / 255.0);
   }
 
   /// Converts normalized RGB (0.0-1.0) values to an integer.
   static int rgb2int2(double r, double g, double b, [double a = 1.0]) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final int A = (a * 255).round() & 0xff;
     final int R = (r * 255).round() & 0xff;
@@ -499,24 +616,36 @@ class ColorConverter {
   /// Converts RGB (0-255) values to a [ColorXy] object.
   @Deprecated('Use rgb2colorXy2 instead')
   static ColorXy rgb2colorXy(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return ColorXy.fromRgb(r, g, b);
   }
 
   /// Converts normalized RGB (0.0-1.0) values to a [ColorXy] object.
   static ColorXy rgb2colorXy2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     return ColorXy.fromRgbNormalized(r, g, b);
   }
@@ -524,12 +653,18 @@ class ColorConverter {
   /// Converts RGB (0-255) values to a [ColorRgb] object.
   @Deprecated('Use rgb2colorRgbNormalized2 instead')
   static ColorRgb rgb2colorRgb(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return ColorRgb(r, g, b);
   }
@@ -537,12 +672,18 @@ class ColorConverter {
   /// Converts normalized RGB (0.0-1.0) values to a [ColorRgb] object.
   @Deprecated('Use rgb2colorRgbNormalized2 instead')
   static ColorRgb rgb2colorRgb2(double r, double g, double b) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     return ColorRgb.fromRgbNormalized(r, g, b);
   }
@@ -550,12 +691,18 @@ class ColorConverter {
   /// Converts RGB (0-255) values to a [ColorRgbNormalized] object.
   @Deprecated('Use rgb2colorRgbNormalized2 instead')
   static ColorRgbNormalized rgb2colorRgbNormalized(int r, int g, int b) {
-    assert(r >= 0 && r <= 255,
-        'r must be greater than or equal to 0 and less than or equal to 255');
-    assert(g >= 0 && g <= 255,
-        'g must be greater than or equal to 0 and less than or equal to 255');
-    assert(b >= 0 && b <= 255,
-        'b must be greater than or equal to 0 and less than or equal to 255');
+    assert(
+      r >= 0 && r <= 255,
+      'r must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      g >= 0 && g <= 255,
+      'g must be greater than or equal to 0 and less than or equal to 255',
+    );
+    assert(
+      b >= 0 && b <= 255,
+      'b must be greater than or equal to 0 and less than or equal to 255',
+    );
 
     return ColorRgbNormalized.fromRgb(r, g, b);
   }
@@ -566,12 +713,18 @@ class ColorConverter {
     double g,
     double b,
   ) {
-    assert(r >= 0.0 && r <= 1.0,
-        'r must be greater than or equal to 0 and less than or equal to 1');
-    assert(g >= 0.0 && g <= 1.0,
-        'g must be greater than or equal to 0 and less than or equal to 1');
-    assert(b >= 0.0 && b <= 1.0,
-        'b must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      r >= 0.0 && r <= 1.0,
+      'r must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      g >= 0.0 && g <= 1.0,
+      'g must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      b >= 0.0 && b <= 1.0,
+      'b must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     return ColorRgbNormalized(r, g, b);
   }
@@ -580,12 +733,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the xy values. [x, y, brightness]
   static List<double> hsv2xy(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return rgb2xy2(rgb[0], rgb[1], rgb[2]);
@@ -596,12 +755,18 @@ class ColorConverter {
   /// Returns a list of integers representing the RGB values. [r, g, b]
   @Deprecated('Use hsv2rgb2 instead')
   static List<int> hsv2rgb(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
 
@@ -616,12 +781,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the RGB values. [r, g, b]
   static List<double> hsv2rgb2(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     if (h < 0) {
       h = 0;
@@ -690,12 +861,18 @@ class ColorConverter {
   ///
   /// Returns a string representing the hex value. ffffffff
   static String hsv2hex(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return rgb2hex2(rgb[0], rgb[1], rgb[2]);
@@ -705,12 +882,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSL values. [h, s, l]
   static List<double> hsv2hsl(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return rgb2hsl2(rgb[0], rgb[1], rgb[2]);
@@ -718,12 +901,18 @@ class ColorConverter {
 
   /// Converts HSV values to a Flutter Color object.
   static Color hsv2color(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return rgb2color2(rgb[0], rgb[1], rgb[2]);
@@ -731,12 +920,18 @@ class ColorConverter {
 
   /// Converts HSV values to an integer.
   static int hsv2int(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return rgb2int2(rgb[0], rgb[1], rgb[2]);
@@ -744,12 +939,18 @@ class ColorConverter {
 
   /// Converts HSV values to a [ColorXy] object.
   static ColorXy hsv2colorXy(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return ColorXy.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -758,12 +959,18 @@ class ColorConverter {
   /// Converts HSV values to a [ColorRgb] object.
   @Deprecated('Use hsv2colorRgbNormalized instead')
   static ColorRgb hsv2colorRgb(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return ColorRgb.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -771,12 +978,18 @@ class ColorConverter {
 
   /// Converts HSV values to a [ColorRgbNormalized] object.
   static ColorRgbNormalized hsv2colorRgbNormalized(int h, double s, double v) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(v >= 0.0 && v <= 1.0,
-        'v must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      v >= 0.0 && v <= 1.0,
+      'v must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsv2rgb2(h, s, v);
     return ColorRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -785,7 +998,7 @@ class ColorConverter {
   /// Converts a hex string to xy coordinates in the CIE 1931 color space.
   ///
   /// Returns a list of doubles representing the xy values. [x, y, brightness]
-  static List<double> hex2xy(hex) {
+  static List<double> hex2xy(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return rgb2xy2(rgb[0], rgb[1], rgb[2]);
   }
@@ -794,7 +1007,7 @@ class ColorConverter {
   ///
   /// Returns a list of integers representing the RGB values. [r, g, b]
   @Deprecated('Use hex2rgb2 instead')
-  static List<int> hex2rgb(hex) {
+  static List<int> hex2rgb(String hex) {
     final List<double> rgb = hex2rgb2(hex);
 
     return [
@@ -807,13 +1020,15 @@ class ColorConverter {
   /// Converts a hex string to normalized RGB (0.0-1.0) values.
   ///
   /// Returns a list of doubles representing the RGB values. [r, g, b]
-  static List<double> hex2rgb2(hex) {
+  static List<double> hex2rgb2(String hex) {
     String hexString = hex.toString().replaceAll('#', '');
     hexString = hexString.replaceAll('0x', '');
 
     if (hexString.length == 3) {
-      hexString =
-          hexString = hexString.split('').map((char) => '$char$char').join('');
+      hexString = hexString = hexString
+          .split('')
+          .map((char) => '$char$char')
+          .join('');
     }
 
     if (hexString.length == 8) {
@@ -830,7 +1045,7 @@ class ColorConverter {
   /// Converts a hex string to HSV values.
   ///
   /// Returns a list of doubles representing the HSV values. [h, s, v]
-  static List<double> hex2hsv(hex) {
+  static List<double> hex2hsv(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return rgb2hsv2(rgb[0], rgb[1], rgb[2]);
   }
@@ -838,38 +1053,38 @@ class ColorConverter {
   /// Converts a hex string to HSL values.
   ///
   /// Returns a list of doubles representing the HSL values. [h, s, l]
-  static List<double> hex2hsl(hex) {
+  static List<double> hex2hsl(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return rgb2hsl2(rgb[0], rgb[1], rgb[2]);
   }
 
   /// Converts a hex string to a Flutter Color object.
-  static Color hex2color(hex) {
+  static Color hex2color(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return rgb2color2(rgb[0], rgb[1], rgb[2]);
   }
 
   /// Converts a hex string to an integer.
-  static int hex2int(hex) {
+  static int hex2int(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return rgb2int2(rgb[0], rgb[1], rgb[2]);
   }
 
   /// Converts a hex string to a [ColorXy] object.
-  static ColorXy hex2colorXy(hex) {
+  static ColorXy hex2colorXy(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return ColorXy.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
   }
 
   /// Converts a hex string to a [ColorRgb] object.
   @Deprecated('Use hex2colorRgbNormalized instead')
-  static ColorRgb hex2colorRgb(hex) {
+  static ColorRgb hex2colorRgb(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return ColorRgb.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
   }
 
   /// Converts a hex string to a [ColorRgbNormalized] object.
-  static ColorRgbNormalized hex2colorRgbNormalized(hex) {
+  static ColorRgbNormalized hex2colorRgbNormalized(String hex) {
     final List<double> rgb = hex2rgb2(hex);
     return ColorRgbNormalized(rgb[0], rgb[1], rgb[2]);
   }
@@ -878,12 +1093,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the xy values. [x, y, brightness]
   static List<double> hsl2xy(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return rgb2xy2(rgb[0], rgb[1], rgb[2]);
@@ -894,12 +1115,18 @@ class ColorConverter {
   /// Returns a list of integers representing the RGB values. [r, g, b]
   @Deprecated('Use hsl2rgb2 instead')
   static List<int> hsl2rgb(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
 
@@ -914,12 +1141,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the RGB values. [r, g, b]
   static List<double> hsl2rgb2(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     if (h < 0) {
       h = 0;
@@ -988,12 +1221,18 @@ class ColorConverter {
   ///
   /// Returns a list of doubles representing the HSV values. [h, s, v]
   static List<double> hsl2hsv(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return rgb2hsv2(rgb[0], rgb[1], rgb[2]);
@@ -1003,12 +1242,18 @@ class ColorConverter {
   ///
   /// Returns a string representing the hex value. ffffffff
   static String hsl2hex(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return rgb2hex2(rgb[0], rgb[1], rgb[2]);
@@ -1016,12 +1261,18 @@ class ColorConverter {
 
   /// Converts HSL values to a Flutter Color object.
   static Color hsl2color(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return rgb2color2(rgb[0], rgb[1], rgb[2]);
@@ -1029,12 +1280,18 @@ class ColorConverter {
 
   /// Converts HSL values to an integer.
   static int hsl2int(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return rgb2int2(rgb[0], rgb[1], rgb[2]);
@@ -1042,12 +1299,18 @@ class ColorConverter {
 
   /// Converts HSL values to a [ColorXy] object.
   static ColorXy hsl2colorXy(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return ColorXy.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -1056,12 +1319,18 @@ class ColorConverter {
   /// Converts HSL values to a [ColorRgb] object.
   @Deprecated('Use hsl2colorRgbNormalized instead')
   static ColorRgb hsl2colorRgb(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return ColorRgb.fromRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -1069,12 +1338,18 @@ class ColorConverter {
 
   /// Converts HSL values to a [ColorRgbNormalized] object.
   static ColorRgbNormalized hsl2colorRgbNormalized(int h, double s, double l) {
-    assert(h >= 0 && h <= 360,
-        'h must be greater than or equal to 0 and less than or equal to 360');
-    assert(s >= 0.0 && s <= 1.0,
-        's must be greater than or equal to 0 and less than or equal to 1');
-    assert(l >= 0.0 && l <= 1.0,
-        'l must be greater than or equal to 0 and less than or equal to 1');
+    assert(
+      h >= 0 && h <= 360,
+      'h must be greater than or equal to 0 and less than or equal to 360',
+    );
+    assert(
+      s >= 0.0 && s <= 1.0,
+      's must be greater than or equal to 0 and less than or equal to 1',
+    );
+    assert(
+      l >= 0.0 && l <= 1.0,
+      'l must be greater than or equal to 0 and less than or equal to 1',
+    );
 
     final List<double> rgb = hsl2rgb2(h, s, l);
     return ColorRgbNormalized(rgb[0], rgb[1], rgb[2]);
@@ -1109,11 +1384,7 @@ class ColorConverter {
   static List<double> color2rgb2(Color color) {
     try {
       final dynamic colorObject = color as dynamic;
-      return [
-        colorObject.r,
-        colorObject.g,
-        colorObject.b,
-      ];
+      return [colorObject.r, colorObject.g, colorObject.b];
     } catch (e) {
       // ignore: deprecated_member_use_from_same_package
       final List<int> oldVersion = color2rgb(color);

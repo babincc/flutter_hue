@@ -1,3 +1,7 @@
+## 3.0.1 - October 1, 2026
+
+- Added type annotations where missing in color converter tool methods.
+
 ## 3.0.0 - October 1, 2026
 
 - Breaking change: Migrating to built-in Kotlin forces the use of Flutter 3.44+ and Dart 3.12+
