@@ -14,11 +14,11 @@ class LightTimedEffects {
     required int duration,
     required this.status,
     required this.statusValues,
-  })  : assert(duration >= 0, '`duration` must be greater than 0'),
-        _originalEffect = effect,
-        _effect = effect,
-        _originalDuration = duration,
-        _duration = duration;
+  }) : assert(duration >= 0, '`duration` must be greater than or equal to 0'),
+       _originalEffect = effect,
+       _effect = effect,
+       _originalDuration = duration,
+       _duration = duration;
 
   /// Creates a [LightTimedEffects] object from the JSON response to a GET
   /// request.
@@ -34,13 +34,13 @@ class LightTimedEffects {
 
   /// Creates an empty [LightTimedEffects] object.
   LightTimedEffects.empty()
-      : effectValues = [],
-        statusValues = [],
-        _originalEffect = '',
-        _effect = '',
-        _originalDuration = 0,
-        _duration = 0,
-        status = '';
+    : effectValues = [],
+      statusValues = [],
+      _originalEffect = '',
+      _effect = '',
+      _originalDuration = 0,
+      _duration = 0,
+      status = '';
 
   String _effect;
 
@@ -143,8 +143,9 @@ class LightTimedEffects {
     LightTimedEffects toReturn = LightTimedEffects(
       effect: copyOriginalValues ? _originalEffect : (effect ?? this.effect),
       effectValues: effectValues ?? List<String>.from(this.effectValues),
-      duration:
-          copyOriginalValues ? _originalDuration : (duration ?? this.duration),
+      duration: copyOriginalValues
+          ? _originalDuration
+          : (duration ?? this.duration),
       status: status ?? this.status,
       statusValues: statusValues ?? List<String>.from(this.statusValues),
     );
@@ -200,10 +201,7 @@ class LightTimedEffects {
 
     // PUT FULL
     if (identical(optimizeFor, OptimizeFor.putFull)) {
-      return {
-        ApiFields.effect: effect,
-        ApiFields.duration: duration,
-      };
+      return {ApiFields.effect: effect, ApiFields.duration: duration};
     }
 
     // DEFAULT
@@ -224,22 +222,26 @@ class LightTimedEffects {
 
     return other is LightTimedEffects &&
         other.effect == effect &&
-        const DeepCollectionEquality.unordered()
-            .equals(other.effectValues, effectValues) &&
+        const DeepCollectionEquality.unordered().equals(
+          other.effectValues,
+          effectValues,
+        ) &&
         other.duration == duration &&
         other.status == status &&
-        const DeepCollectionEquality.unordered()
-            .equals(other.statusValues, statusValues);
+        const DeepCollectionEquality.unordered().equals(
+          other.statusValues,
+          statusValues,
+        );
   }
 
   @override
   int get hashCode => Object.hash(
-        effect,
-        const DeepCollectionEquality.unordered().hash(effectValues),
-        duration,
-        status,
-        const DeepCollectionEquality.unordered().hash(statusValues),
-      );
+    effect,
+    const DeepCollectionEquality.unordered().hash(effectValues),
+    duration,
+    status,
+    const DeepCollectionEquality.unordered().hash(statusValues),
+  );
 
   @override
   String toString() =>

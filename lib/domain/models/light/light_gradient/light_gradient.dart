@@ -13,11 +13,11 @@ class LightGradient {
     required List<LightColorXy> points,
     required String mode,
     required this.modeValues,
-  })  : assert(points.length <= 5, '`points` must have 5 or fewer elements'),
-        _originalPoints = points.map((point) => point.copyWith()).toList(),
-        _points = points,
-        _originalMode = mode,
-        _mode = mode;
+  }) : assert(points.length <= 5, '`points` must have 5 or fewer elements'),
+       _originalPoints = points.map((point) => point.copyWith()).toList(),
+       _points = points,
+       _originalMode = mode,
+       _mode = mode;
 
   /// Creates a [LightGradient] object from the JSON response to a GET request.
   factory LightGradient.fromJson(Map<String, dynamic> dataMap) {
@@ -36,11 +36,11 @@ class LightGradient {
 
   /// Creates an empty [LightGradient] object.
   LightGradient.empty()
-      : modeValues = [],
-        _points = [],
-        _originalPoints = [],
-        _originalMode = '',
-        _mode = '';
+    : modeValues = [],
+      _points = [],
+      _originalPoints = [],
+      _originalMode = '',
+      _mode = '';
 
   List<LightColorXy> _points;
 
@@ -48,10 +48,12 @@ class LightGradient {
   ///
   /// For control of the gradient points through a PUT a minimum of 2 points and
   /// a maximum of 5 need to be provided.
+  /// Assignments with more than 5 points are ignored, preserving the current
+  /// gradient.
   List<LightColorXy> get points =>
       List<LightColorXy>.from(_points, growable: false);
   set points(List<LightColorXy> points) {
-    if (points.length < 5) {
+    if (points.length <= 5) {
       _points = points;
     } else {
       // This was removed because some lights don't follow this rule even though
@@ -117,8 +119,10 @@ class LightGradient {
   /// If `true`, then the data in this object differs from what is on the
   /// bridge.
   bool get hasUpdate =>
-      !(const DeepCollectionEquality.unordered()
-          .equals(points, _originalPoints)) ||
+      !(const DeepCollectionEquality.unordered().equals(
+        points,
+        _originalPoints,
+      )) ||
       points.any((point) => point.hasUpdate) ||
       mode != _originalMode;
 
@@ -167,25 +171,31 @@ class LightGradient {
     LightGradient toReturn = LightGradient(
       points: copyOriginalValues
           ? originalPoints
-              .map((point) =>
-                  point.copyWith(copyOriginalValues: copyOriginalValues))
-              .toList()
+                .map(
+                  (point) =>
+                      point.copyWith(copyOriginalValues: copyOriginalValues),
+                )
+                .toList()
           : (points ??
-              this
-                  .points
-                  .map((point) =>
-                      point.copyWith(copyOriginalValues: copyOriginalValues))
-                  .toList()),
+                this.points
+                    .map(
+                      (point) => point.copyWith(
+                        copyOriginalValues: copyOriginalValues,
+                      ),
+                    )
+                    .toList()),
       mode: copyOriginalValues ? originalMode : (mode ?? this.mode),
       modeValues: modeValues ?? List<String>.from(this.modeValues),
     );
 
     if (copyOriginalValues) {
-      toReturn.points = points ??
-          this
-              .points
-              .map((point) =>
-                  point.copyWith(copyOriginalValues: copyOriginalValues))
+      toReturn.points =
+          points ??
+          this.points
+              .map(
+                (point) =>
+                    point.copyWith(copyOriginalValues: copyOriginalValues),
+              )
               .toList();
       toReturn.mode = mode ?? this.mode;
     }
@@ -232,14 +242,18 @@ class LightGradient {
     if (identical(optimizeFor, OptimizeFor.put)) {
       Map<String, dynamic> toReturn = {};
 
-      if (!const DeepCollectionEquality.unordered()
-          .equals(points, originalPoints)) {
+      if (!const DeepCollectionEquality.unordered().equals(
+        points,
+        originalPoints,
+      )) {
         toReturn[ApiFields.points] = points
-            .map((point) => {
-                  ApiFields.color: {
-                    ApiFields.xy: point.toJson(optimizeFor: OptimizeFor.putFull)
-                  }
-                })
+            .map(
+              (point) => {
+                ApiFields.color: {
+                  ApiFields.xy: point.toJson(optimizeFor: OptimizeFor.putFull),
+                },
+              },
+            )
             .toList();
       }
 
@@ -254,11 +268,13 @@ class LightGradient {
     if (identical(optimizeFor, OptimizeFor.putFull)) {
       return {
         ApiFields.points: points
-            .map((point) => {
-                  ApiFields.color: {
-                    ApiFields.xy: point.toJson(optimizeFor: OptimizeFor.putFull)
-                  }
-                })
+            .map(
+              (point) => {
+                ApiFields.color: {
+                  ApiFields.xy: point.toJson(optimizeFor: OptimizeFor.putFull),
+                },
+              },
+            )
             .toList(),
         ApiFields.mode: mode,
       };
@@ -274,8 +290,8 @@ class LightGradient {
                   optimizeFor: identical(optimizeFor, OptimizeFor.dontOptimize)
                       ? optimizeFor
                       : OptimizeFor.putFull,
-                )
-              }
+                ),
+              },
             },
           )
           .toList(),
@@ -293,16 +309,18 @@ class LightGradient {
     return other is LightGradient &&
         const DeepCollectionEquality.unordered().equals(other.points, points) &&
         other.mode == mode &&
-        const DeepCollectionEquality.unordered()
-            .equals(other.modeValues, modeValues);
+        const DeepCollectionEquality.unordered().equals(
+          other.modeValues,
+          modeValues,
+        );
   }
 
   @override
   int get hashCode => Object.hash(
-        const DeepCollectionEquality.unordered().hash(points),
-        mode,
-        const DeepCollectionEquality.unordered().hash(modeValues),
-      );
+    const DeepCollectionEquality.unordered().hash(points),
+    mode,
+    const DeepCollectionEquality.unordered().hash(modeValues),
+  );
 
   @override
   String toString() =>

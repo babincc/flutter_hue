@@ -49,7 +49,7 @@ class MyFileExplorerSDK {
   /// call to [fetchFile] would throw a [FileSystemException].
   static Future<File?> tryFetchFile(String filePath) async {
     try {
-      return fetchFile(filePath);
+      return await fetchFile(filePath);
     } on FileSystemException {
       return null;
     }
@@ -341,8 +341,9 @@ class MyFileExplorerSDK {
 
     if (filePath.contains(Platform.pathSeparator)) {
       fileName = filePath.substring(
-          filePath.lastIndexOf(Platform.pathSeparator) + 1,
-          filePath.lastIndexOf('.'));
+        filePath.lastIndexOf(Platform.pathSeparator) + 1,
+        filePath.lastIndexOf('.'),
+      );
     } else {
       fileName = filePath.substring(0, filePath.lastIndexOf('.'));
     }
@@ -402,9 +403,7 @@ class MyFileExplorerSDK {
     Platform.pathSeparator,
   ];
 
-  static const List<String> _illegalPathChars = [
-    '..',
-  ];
+  static const List<String> _illegalPathChars = ['..'];
 
   /// Removes illegal characters from the givin `fileName`.
   static String sterilizeFileName(String fileName) {
@@ -453,11 +452,13 @@ class MyFileExplorerSDK {
     }
 
     // Remove double path separators.
-    while (filePathSterile
-        .contains('${Platform.pathSeparator}${Platform.pathSeparator}')) {
+    while (filePathSterile.contains(
+      '${Platform.pathSeparator}${Platform.pathSeparator}',
+    )) {
       filePathSterile.replaceAll(
-          '${Platform.pathSeparator}${Platform.pathSeparator}',
-          Platform.pathSeparator);
+        '${Platform.pathSeparator}${Platform.pathSeparator}',
+        Platform.pathSeparator,
+      );
     }
 
     // Remove improper leading chars.
@@ -484,8 +485,9 @@ class MyFileExplorerSDK {
     }
 
     // Check for double path separators.
-    if (filePath
-        .contains('${Platform.pathSeparator}${Platform.pathSeparator}')) {
+    if (filePath.contains(
+      '${Platform.pathSeparator}${Platform.pathSeparator}',
+    )) {
       return false;
     }
 

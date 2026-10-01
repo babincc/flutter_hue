@@ -1,3 +1,12 @@
+## 3.0.0 - October 1, 2026
+
+- Breaking change: Migrating to built-in Kotlin forces the use of Flutter 3.44+ and Dart 3.12+
+- Migrated the Android plugin to support built-in Kotlin without explicitly applying the Kotlin Gradle Plugin.
+- Raised the minimum supported SDK versions to Flutter 3.44 and Dart 3.12.
+- Updated the Android example to Android Gradle Plugin 9.1.0 and Gradle 9.3.1 with built-in Kotlin enabled (requires Flutter 3.47 and Dart 3.13).
+- Fixed the gradient setter ignoring valid five-point gradients.
+- Updated model test fixtures and empty-value expectations to match the current API.
+
 ## 2.3.0 - March 4, 2025
 
 - Added `rendererReference` to the `Entertainment` object

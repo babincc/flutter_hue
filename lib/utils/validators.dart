@@ -95,9 +95,9 @@ class Validators {
   /// pattern.
   ///
   /// Regex pattern `^(?!^\.)[0-9]{0,3}([.][0-9]{1,3}){1,2}$`
-  static bool isValidScriptVersion(String scriptVersion) =>
-      RegExp(r'^(?!^\.)[0-9]{0,3}([.][0-9]{1,3}){1,2}$')
-          .hasMatch(scriptVersion);
+  static bool isValidScriptVersion(String scriptVersion) => RegExp(
+    r'^(?!^\.)[0-9]{0,3}([.][0-9]{1,3}){1,2}$',
+  ).hasMatch(scriptVersion);
 
   /// Returns `true` if the given `softwareVersion` conforms to the proper regex
   /// pattern.
@@ -106,8 +106,8 @@ class Validators {
   static bool isValidSoftwareVersion(String softwareVersion) =>
       RegExp(r'^\d+\.\d+\.\d+$').hasMatch(softwareVersion);
 
-  /// Returns `true` if the the given `value` is found within `validValues` or
-  /// if the `validValues` list is empty and `value` is empty as well.
+  /// Returns `true` if `value` is found within `validValues` or is an empty
+  /// string or iterable. Returns `false` for `null`.
   static bool isValidValue<T>(T value, List<T> validValues) {
     if (value == null) return false;
 

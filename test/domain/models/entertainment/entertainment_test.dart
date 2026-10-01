@@ -27,12 +27,7 @@ void main() {
     segmentCapabilities: EntertainmentSegmentCapabilities(
       isConfigurable: false,
       maxSegments: 5,
-      segments: [
-        EntertainmentSegment(
-          start: 0,
-          length: 3,
-        ),
-      ],
+      segments: [EntertainmentSegment(start: 0, length: 3)],
     ),
   );
 
@@ -45,6 +40,10 @@ void main() {
       ApiFields.rid: '1a2b3c4d-5e6f-7a8b-9c0d-ef1a2b3c4d5e',
     },
     ApiFields.isRenderer: false,
+    ApiFields.rendererReference: {
+      ApiFields.rType: ResourceType.light.value,
+      ApiFields.rid: 'a12b3c4d-5e6f-7a8b-9c0d-ef1a2b3c4d5e',
+    },
     ApiFields.isProxy: false,
     ApiFields.isEqualizer: false,
     ApiFields.maxStreams: 2,
@@ -52,250 +51,148 @@ void main() {
       ApiFields.isConfigurable: false,
       ApiFields.maxSegments: 5,
       ApiFields.segments: [
-        {
-          ApiFields.start: 0,
-          ApiFields.length: 3,
-        },
+        {ApiFields.start: 0, ApiFields.length: 3},
       ],
     },
   };
 
-  group(
-    'fromJson',
-    () {
-      test(
-        'ideal scenario',
-        () {
-          expect(
-            Entertainment.fromJson(testEntertainmentJson),
-            testEntertainment,
-          );
-        },
+  group('fromJson', () {
+    test('ideal scenario', () {
+      expect(Entertainment.fromJson(testEntertainmentJson), testEntertainment);
+    });
+
+    test('data scenario 1', () {
+      expect(
+        Entertainment.fromJson({ApiFields.data: testEntertainmentJson}),
+        testEntertainment,
+      );
+    });
+
+    test('data scenario 2', () {
+      expect(
+        Entertainment.fromJson({
+          ApiFields.data: [testEntertainmentJson],
+        }),
+        testEntertainment,
+      );
+    });
+
+    test('data scenario 3', () {
+      expect(
+        Entertainment.fromJson({
+          ApiFields.error: [],
+          ApiFields.data: [testEntertainmentJson],
+        }),
+        testEntertainment,
+      );
+    });
+  });
+
+  group('copyWith', () {
+    test('no change', () {
+      Entertainment copyEntertainment = testEntertainment.copyWith();
+
+      expect(
+        copyEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
+        testEntertainmentJson,
+      );
+    });
+
+    test('with changes', () {
+      Entertainment copyEntertainment = testEntertainment.copyWith(
+        id: '00000000-0000-0000-0000-000000000000',
+        idV1: '/test/1234-5678-9012-3456-7890',
       );
 
-      test(
-        'data scenario 1',
-        () {
-          expect(
-            Entertainment.fromJson({ApiFields.data: testEntertainmentJson}),
-            testEntertainment,
-          );
-        },
+      Map<String, dynamic> copyEntertainmentJson = Map<String, dynamic>.from(
+        testEntertainmentJson,
       );
 
-      test(
-        'data scenario 2',
-        () {
-          expect(
-            Entertainment.fromJson({
-              ApiFields.data: [testEntertainmentJson]
-            }),
-            testEntertainment,
-          );
-        },
+      copyEntertainmentJson[ApiFields.id] =
+          '00000000-0000-0000-0000-000000000000';
+      copyEntertainmentJson[ApiFields.idV1] = '/test/1234-5678-9012-3456-7890';
+
+      expect(
+        copyEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
+        copyEntertainmentJson,
       );
+    });
+  });
 
-      test(
-        'data scenario 3',
-        () {
-          expect(
-            Entertainment.fromJson({
-              ApiFields.error: [],
-              ApiFields.data: [testEntertainmentJson]
-            }),
-            testEntertainment,
-          );
-        },
+  group('toJson', () {
+    test("don't optimize", () {
+      expect(
+        testEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
+        testEntertainmentJson,
       );
-    },
-  );
+    });
 
-  group(
-    'copyWith',
-    () {
-      test(
-        'no change',
-        () {
-          Entertainment copyEntertainment = testEntertainment.copyWith();
+    test('optimize for PUT (no change)', () {
+      expect(testEntertainment.toJson(), {});
+    });
 
-          expect(
-            copyEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
-            testEntertainmentJson,
+    test('optimize for PUT (with change)', () {
+      Entertainment alteredEntertainment = testEntertainment.copyWith();
+      alteredEntertainment.type = ResourceType.device;
+
+      expect(alteredEntertainment.toJson(optimizeFor: OptimizeFor.put), {
+        ApiFields.type: ResourceType.device.value,
+      });
+    });
+  });
+
+  group('exceptions and assertions', () {
+    test('invalid id assertion', () {
+      expect(() {
+        testEntertainment.copyWith(id: 'bad_value');
+      }, throwsAssertionError);
+    });
+
+    test('invalid idV1 assertion', () {
+      expect(() {
+        testEntertainment.copyWith(idV1: 'bad_value');
+      }, throwsAssertionError);
+    });
+
+    test('invalid max streams assertion', () {
+      expect(() {
+        testEntertainment.copyWith(maxStreams: 0);
+      }, throwsAssertionError);
+    });
+
+    group('segments', () {
+      test('invalid max segments assertion', () {
+        expect(() {
+          testEntertainment.copyWith(
+            segmentCapabilities: EntertainmentSegmentCapabilities(
+              isConfigurable:
+                  testEntertainment.segmentCapabilities.isConfigurable,
+              maxSegments: 0,
+              segments: testEntertainment.segmentCapabilities.segments,
+            ),
           );
-        },
-      );
+        }, throwsAssertionError);
+      });
 
-      test(
-        'with changes',
-        () {
-          Entertainment copyEntertainment = testEntertainment.copyWith(
-            id: '00000000-0000-0000-0000-000000000000',
-            idV1: '/test/1234-5678-9012-3456-7890',
+      test('invalid start assertion', () {
+        expect(() {
+          testEntertainment.copyWith(
+            segmentCapabilities: testEntertainment.segmentCapabilities.copyWith(
+              segments: [EntertainmentSegment(start: -1, length: 3)],
+            ),
           );
+        }, throwsAssertionError);
+      });
 
-          Map<String, dynamic> copyEntertainmentJson =
-              Map<String, dynamic>.from(testEntertainmentJson);
-
-          copyEntertainmentJson[ApiFields.id] =
-              '00000000-0000-0000-0000-000000000000';
-          copyEntertainmentJson[ApiFields.idV1] =
-              '/test/1234-5678-9012-3456-7890';
-
-          expect(
-            copyEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
-            copyEntertainmentJson,
+      test('invalid length assertion', () {
+        expect(() {
+          testEntertainment.copyWith(
+            segmentCapabilities: testEntertainment.segmentCapabilities.copyWith(
+              segments: [EntertainmentSegment(start: 0, length: 0)],
+            ),
           );
-        },
-      );
-    },
-  );
-
-  group(
-    'toJson',
-    () {
-      test(
-        "don't optimize",
-        () {
-          expect(
-            testEntertainment.toJson(optimizeFor: OptimizeFor.dontOptimize),
-            testEntertainmentJson,
-          );
-        },
-      );
-
-      test(
-        'optimize for PUT (no change)',
-        () {
-          expect(
-            testEntertainment.toJson(),
-            {},
-          );
-        },
-      );
-
-      test(
-        'optimize for PUT (with change)',
-        () {
-          Entertainment alteredEntertainment = testEntertainment.copyWith();
-          alteredEntertainment.type = ResourceType.device;
-
-          expect(
-            alteredEntertainment.toJson(optimizeFor: OptimizeFor.put),
-            {
-              ApiFields.type: ResourceType.device.value,
-            },
-          );
-        },
-      );
-    },
-  );
-
-  group(
-    'exceptions and assertions',
-    () {
-      test(
-        'invalid id assertion',
-        () {
-          expect(
-            () {
-              testEntertainment.copyWith(id: 'bad_value');
-            },
-            throwsAssertionError,
-          );
-        },
-      );
-
-      test(
-        'invalid idV1 assertion',
-        () {
-          expect(
-            () {
-              testEntertainment.copyWith(idV1: 'bad_value');
-            },
-            throwsAssertionError,
-          );
-        },
-      );
-
-      test(
-        'invalid max streams assertion',
-        () {
-          expect(
-            () {
-              testEntertainment.copyWith(maxStreams: 0);
-            },
-            throwsAssertionError,
-          );
-        },
-      );
-
-      group(
-        'segments',
-        () {
-          test(
-            'invalid max segments assertion',
-            () {
-              expect(
-                () {
-                  testEntertainment.copyWith(
-                    segmentCapabilities: EntertainmentSegmentCapabilities(
-                      isConfigurable:
-                          testEntertainment.segmentCapabilities.isConfigurable,
-                      maxSegments: 0,
-                      segments: testEntertainment.segmentCapabilities.segments,
-                    ),
-                  );
-                },
-                throwsAssertionError,
-              );
-            },
-          );
-
-          test(
-            'invalid start assertion',
-            () {
-              expect(
-                () {
-                  testEntertainment.copyWith(
-                    segmentCapabilities:
-                        testEntertainment.segmentCapabilities.copyWith(
-                      segments: [
-                        EntertainmentSegment(
-                          start: -1,
-                          length: 3,
-                        )
-                      ],
-                    ),
-                  );
-                },
-                throwsAssertionError,
-              );
-            },
-          );
-
-          test(
-            'invalid length assertion',
-            () {
-              expect(
-                () {
-                  testEntertainment.copyWith(
-                    segmentCapabilities:
-                        testEntertainment.segmentCapabilities.copyWith(
-                      segments: [
-                        EntertainmentSegment(
-                          start: 0,
-                          length: 0,
-                        )
-                      ],
-                    ),
-                  );
-                },
-                throwsAssertionError,
-              );
-            },
-          );
-        },
-      );
-    },
-  );
+        }, throwsAssertionError);
+      });
+    });
+  });
 }

@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:app_links/app_links.dart';
 import 'package:example/stream_demos/stream_demos_screen.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide RadioGroup;
 import 'package:flutter_hue/flutter_hue.dart';
 import 'package:radio_group_v2/radio_group_v2.dart';
 
